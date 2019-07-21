@@ -1,0 +1,4 @@
+browser ----> server: POST https://fullstack-exampleapp.herokuapp.com/new_note_spa with payload {content: "<typed in text>", date: "<timestamp>"}
+                      Request made async via JavaScript. Server saves note. Server responds with payload {"message":"note created"}
+                      Browser adds typed in value to DOM and clears the input field.
+

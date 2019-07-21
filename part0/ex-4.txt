@@ -1,0 +1,18 @@
+browser ----> server: GET https://fullstack-exampleapp.herokuapp.com/notes
+browser <---- server: Serve HTML.
+                      HTML has references to other files on the server so those
+                      get requested too.
+browser ----> server: GET https://fullstack-exampleapp.herokuapp.com/data.json
+                      Request made async via JavaScript.
+browser <---- server: Serve JSON.
+                      Browser renders data.json.
+browser ----> server: POST https://fullstack-exampleapp.herokuapp.com/new_note with param { "note": "<typed in note>" }
+                      Server saves note.
+browser <---  server: Redirect browser to /notes
+browser ----> server: GET https://fullstack-exampleapp.herokuapp.com/notes
+browser <---- server: Serve HTML.
+browser ----> server: GET https://fullstack-exampleapp.herokuapp.com/data.json
+browser <---- server: Serve JSON.
+                      Browser renders data.json. New note now added.
+
+
